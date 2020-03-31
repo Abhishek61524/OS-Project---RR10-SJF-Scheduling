@@ -12,7 +12,7 @@ struct exec{
 
 		
 int main()
-{   printf("\nNOTE:  The arrival time must not start with 0 as time array in the program starts with 1\n ");
+{   
     printf("\nEnter No of processes :");
     scanf("%d",&n);
     int processleft=n; 
@@ -201,10 +201,10 @@ int main()
 	for(int i=0;i<n;i++)
 	{
 	
-		printf("\n%c\t\t%d\t\t%d\t\t%d\t\t%d",p[i].name,p[i].arrival_time,p[i].burst_time,p[i].waiting_time,p[i].turnaround_t);
+		printf("\n%c\t\t%d\t\t%d\t\t%d\t\t%d",p[i].name,p[i].arrival_time,p[i].burst_time,p[i].waiting_time-1,p[i].turnaround_t-1);
 		
 	}
 
-    printf("\nAverage  waiting time = %f ",avgwaitt);
-    printf("\nAverage Turn Around Time = %f \n",avgtat);
+    printf("\nAverage  waiting time = %f ",avgwaitt-1);
+    printf("\nAverage Turn Around Time = %f \n",avgtat-1);
 }
